@@ -12,7 +12,11 @@ from app.routes import productos_router  # importa tu router
 app = FastAPI(
     title="POS API",
     version="1.0.0",
-    description="API para gestión de productos con arquitectura limpia"
+    description="API para gestión de productos con arquitectura limpia",
+    root_path="/AutoServicioLite",
+    docs_url="/docs",  # Accesible desde /AutoServicioLite/docs
+    redoc_url=None,
+    openapi_url="/openapi.json"
 )
 
 # Middleware opcional para CORS (útil si tienes frontend separado)
